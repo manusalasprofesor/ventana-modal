@@ -1,0 +1,120 @@
+@charset "utf-8";
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font-primary: 'Hubballi', cursive;
+    --bg-primary: #333;
+    --font-size-primary: 18px;
+    --bg-secondary: rgba(98, 52, 224, 0.842);
+    --bg-modal: rgb(187, 177, 241);
+    --text-color: #f8f8f8;
+}
+
+body {
+    background-color: var(--bg-primary);
+    font-family: var(--font-primary);
+    font-size: var(--font-size-primary);
+}
+
+#container {
+    width: 100vw;
+    height: 60vh;
+    background-color: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: calc(var(--font-size-primary) * 3);
+}
+
+a {
+    display: inline-block;
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: calc(var(--font-size-primary) * 1.2);
+    transition: background-color 0.8s ease;
+}
+
+a:hover {
+    background-color: #000;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(51, 51, 51, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oculta-modal {
+    display: none;
+}
+
+.modal-container header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-container header i {
+    font-size: 1.5rem;
+    transition: transform ease 0.3s;
+}
+
+.modal-container header i:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.modal-container header,
+.modal-container footer {
+    background-color: var(--bg-primary);
+    color: var(--text-color);
+    padding: 0.5rem;
+}
+
+.modal-container main {
+    padding: 0.8rem 1rem;
+    text-align: justify;
+}
+
+.modal-container {
+    position: relative;
+    width: 30vw;
+    margin: auto;
+    background-color: var(--bg-modal);
+    padding: 1rem;
+    animation-name: modal;
+    animation-duration: 3s;
+}
+
+@keyframes modal {
+    from {
+        top: -500px;
+        opacity: 0;
+    }
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}

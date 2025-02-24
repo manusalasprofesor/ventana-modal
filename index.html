@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ventana Modal, versión mejorada</title>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/029874ded0.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hubballi&display=swap" rel="stylesheet">
+    <!-- Mis estilos -->
+    <link rel="stylesheet" href="css/modal-style.css">
+</head>
+
+<body>
+    <!-- Contenedor para el desencadenante del modal-->
+    <div id="container">
+        <h1>Ventana Modal</h1>
+        <!-- Enlace para llamar al modal -->
+        <a href="#" id="abrir">Modal con HTML, CSS y JavaScript</a>
+    </div>
+
+    <!-- Contenedor del modal -->
+    <div class="modal oculta-modal" id="modal">
+        <div class="modal-container">
+            <header>
+                <h2>Titular ventana</h2>
+                <i class="fa-solid fa-square-xmark" id="cerrar"></i>
+            </header>
+            <main>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint sed molestiae, ratione eos neque provident beatae ut officia temporibus impedit aspernatur porro. Vitae exercitationem sequi amet, sunt explicabo beatae rerum.</p>
+            </main>
+            <footer>
+                <h3>Footer</h3>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Mis scripts -->
+    <script src="js/modal.js"></script>
+</body>
+
+</html>
